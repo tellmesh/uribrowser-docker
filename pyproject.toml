@@ -11,7 +11,6 @@ dependencies = ["uribrowser[real]>=0.1.0"]
 
 [tool.uv.sources]
 uribrowser = { path = "../../uribrowser", editable = true }
-urisysedge = { path = "../../urisysedge", editable = true }
 
 [project.scripts]
 urisys-browser = "uribrowseredge.cli:main"
