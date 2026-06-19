@@ -5,13 +5,15 @@
 #
 FROM python:3.12-slim
 WORKDIR /build
-COPY urirouter /build/urirouter
-COPY uricore /build/uricore
+COPY uriresolver /build/uriresolver
+COPY uriguard /build/uriguard
+COPY uricontrol /build/uricontrol
 COPY uribrowser /build/uribrowser
 COPY uribrowser-docker /build/uribrowser-docker
 RUN pip install --no-cache-dir \
-    -e /build/urirouter \
-    -e /build/uricore \
+    -e /build/uriresolver \
+    -e /build/uriguard \
+    -e /build/uricontrol \
     -e /build/uribrowser \
     -e /build/uribrowser-docker
 WORKDIR /build/uribrowser-docker
